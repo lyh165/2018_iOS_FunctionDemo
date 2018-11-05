@@ -1,11 +1,3 @@
-//
-//  ViewController.m
-//  LocalDelivery
-//
-//  Created by lee on 2018/11/5.
-//  Copyright © 2018年 lee. All rights reserved.
-//
-
 #import "ViewController.h"
 #import <UserNotifications/UserNotifications.h> // 导入通知的库
 @interface ViewController ()
