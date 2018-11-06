@@ -13,6 +13,7 @@
 		9B8E083E218FF0BE001BC5BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B8E083D218FF0BE001BC5BF /* Assets.xcassets */; };
 		9B8E0841218FF0BE001BC5BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B8E083F218FF0BE001BC5BF /* LaunchScreen.storyboard */; };
 		9B8E0844218FF0BE001BC5BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8E0843218FF0BE001BC5BF /* main.m */; };
+		9B8E086F219016DC001BC5BF /* LYH_PushService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8E086E219016DC001BC5BF /* LYH_PushService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		9B8E0840218FF0BE001BC5BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B8E0842218FF0BE001BC5BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B8E0843218FF0BE001BC5BF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9B8E086C2190160F001BC5BF /* testApns.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = testApns.entitlements; sourceTree = "<group>"; };
+		9B8E086D219016DC001BC5BF /* LYH_PushService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYH_PushService.h; sourceTree = "<group>"; };
+		9B8E086E219016DC001BC5BF /* LYH_PushService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYH_PushService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +62,13 @@
 		9B8E0833218FF0BC001BC5BF /* testApns */ = {
 			isa = PBXGroup;
 			children = (
+				9B8E086C2190160F001BC5BF /* testApns.entitlements */,
 				9B8E0834218FF0BC001BC5BF /* AppDelegate.h */,
 				9B8E0835218FF0BC001BC5BF /* AppDelegate.m */,
 				9B8E0837218FF0BC001BC5BF /* ViewController.h */,
 				9B8E0838218FF0BC001BC5BF /* ViewController.m */,
+				9B8E086D219016DC001BC5BF /* LYH_PushService.h */,
+				9B8E086E219016DC001BC5BF /* LYH_PushService.m */,
 				9B8E083A218FF0BD001BC5BF /* Main.storyboard */,
 				9B8E083D218FF0BE001BC5BF /* Assets.xcassets */,
 				9B8E083F218FF0BE001BC5BF /* LaunchScreen.storyboard */,
@@ -102,6 +109,14 @@
 				TargetAttributes = {
 					9B8E0830218FF0BC001BC5BF = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -142,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B8E0839218FF0BC001BC5BF /* ViewController.m in Sources */,
+				9B8E086F219016DC001BC5BF /* LYH_PushService.m in Sources */,
 				9B8E0844218FF0BE001BC5BF /* main.m in Sources */,
 				9B8E0836218FF0BC001BC5BF /* AppDelegate.m in Sources */,
 			);
@@ -283,14 +299,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = testApns/testApns.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 56A6TT4X27;
 				INFOPLIST_FILE = testApns/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lyh.testApns;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "1612c842-bb27-49c7-8883-7406f5bc3dad";
+				PROVISIONING_PROFILE_SPECIFIER = dev_lyhTestApns;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -299,14 +321,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = testApns/testApns.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 56A6TT4X27;
 				INFOPLIST_FILE = testApns/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lyh.testApns;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "1612c842-bb27-49c7-8883-7406f5bc3dad";
+				PROVISIONING_PROFILE_SPECIFIER = dev_lyhTestApns;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
