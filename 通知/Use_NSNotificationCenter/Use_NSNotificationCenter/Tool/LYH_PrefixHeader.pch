@@ -1,0 +1,16 @@
+/**
+ 该类的作用是:
+ 《预编译的时候导入文件》
+ 也可以同作公共导入理解,相当于在每个.h文件都引入了一遍
+ */
+#ifndef LYH_PrefixHeader_pch
+#define LYH_PrefixHeader_pch
+
+// 系统的框架
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+
+#import "APPNameNotification.h" // 所有通知的名称定义
+
+#endif /* LYH_PrefixHeader_pch */

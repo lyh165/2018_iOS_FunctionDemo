@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LYH_ViewController">
+            <connections>
+                <outlet property="tf_sendNotificationContent" destination="hJ9-XH-otp" id="EJD-r3-QGE"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2a-MA-KRo">
+                    <rect key="frame" x="156" y="318" width="62" height="30"/>
+                    <state key="normal" title="发送通知"/>
+                    <connections>
+                        <action selector="sendNotification:" destination="-1" eventType="touchUpInside" id="2Ly-L4-eH7"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="需要需要传递的值到ViewController" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hJ9-XH-otp">
+                    <rect key="frame" x="65.5" y="280" width="244.5" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="R2a-MA-KRo" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="aq4-Mq-QKJ"/>
+                <constraint firstItem="hJ9-XH-otp" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dfO-t8-PGg"/>
+                <constraint firstItem="R2a-MA-KRo" firstAttribute="top" secondItem="hJ9-XH-otp" secondAttribute="bottom" constant="8" id="uni-GK-jtc"/>
+                <constraint firstItem="R2a-MA-KRo" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="xop-Hd-oVC"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="32.5" y="85.5"/>
+        </view>
+    </objects>
+</document>
